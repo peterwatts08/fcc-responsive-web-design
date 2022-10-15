@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="title-group">
+                <h1 id="title">Maths Education Survey Form</h1>
+                <p id="description">Please complete this form sharing your experience of studying Mathematics</p>
+            </div>
+            <form id="survey-form">
+                <label for="name" id="name-label">
+                    <span style="margin:auto 0;">Please enter your name</span>
+                    <input 
+                        type="text" id="name" 
+                        required placeholder="Alan Turing"
+                    >
+                </label>
+                <label for="email" id="email-label">
+                    <span style="margin:auto 0;">Please enter your email address</span>
+                    <input 
+                        type="email" id="email" 
+                        required placeholder="a.turing@enigma.com"
+                    >
+                </label>
+                <label for="number" id="number-label">
+                    <span style="margin:auto 0;">Roughly how many years ago did you last study Mathematics?</span>
+                    <input
+                        type="number" id="number" 
+                        required min="0" max="50"
+                        placeholder="x"
+                    >
+                </label>
+                <label for="dropdown">
+                    <span style="margin:auto 0;">Select your highest level qualification related to Mathematics</span>
+                    <select id="dropdown">
+                        <option>Please select</option>
+                        <option>GCSE</option>
+                        <option>A-Level</option>
+                        <option>Bachelor's Degree</option>
+                        <option>Master's Degree</option>
+                        <option>Doctorate</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+                <p id="rating">Rate your enjoyment of studying Mathematics</p>
+                <div class="radio-group">
+                    <label for="1">
+                        1 (hate it!)
+                        <input type="radio" id="1" name="rating" value="1">
+                    </label>
+                    <label for="2">
+                        2
+                        <input type="radio" id="2" name="rating" value="2">
+                    </label>
+                    <label for="3">
+                        3
+                        <input type="radio" id="3" name="rating" value="3">
+                    </label>
+                    <label for="4">
+                        4
+                        <input type="radio" id="4" name="rating" value="4">
+                    </label>
+                    <label for="5">
+                        5 (love it!)
+                        <input type="radio" id="5" name="rating" value="5">
+                    </label>
+                </div>
+                <p id="contact">Do you agree to be contacted by us if we have any follow up questions?</p>
+                <div class="checkbox-group">
+                    <label for="yes">
+                        Yes
+                        <input type="checkbox" id="yes" name="contact" value="yes">
+                    </label>
+                    <label for="no">
+                        No
+                        <input type="checkbox" id="no" name="contact" value="no">
+                    </label>
+                </div>
+                <p id="contact">Please enter any additional comments below</p>
+                <textarea 
+                    id="comments" rows="5"
+                    placeholder="Enter here...">
+                </textarea>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+    </body> 
+</html>
