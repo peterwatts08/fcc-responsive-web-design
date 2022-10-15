@@ -49,8 +49,8 @@ label > input[type="text"], input[type="email"], input[type="number"] {
 }
 
 select {
-    height: 36px;
-    max-width: 256px;
+    height: 30px;
+    max-width: 240px;
     margin-left: 20px;
     padding: 2px 10px;
     width: 50%;
