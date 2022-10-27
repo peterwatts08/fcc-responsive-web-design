@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Steven Gerrard</title>
+        <link rel="stylesheet" href="styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <main id="main">
+        <div id="container">
+            <header id="header" class="center">
+                <h1 id="title">Steven Gerrard</h1>
+                <h2 id="subtitle">Liverpool Legend</h2>
+            </header>
+            <figure id="img-div">
+                <img src="https://i.ibb.co/L5kDGm5/gerrard.png" id="image" alt="">
+                <figcaption id="img-caption">Steven Gerrard celebrating a goal for Liverpool</figcaption>
+            </figure>
+            <div class="center">
+                <h3 id="scroll-msg">Scroll for stats</h3>
+            </div>    
+        </div>
+        <div style="display: none;">
+            <p id="tribute-info">Steven Gerrard </p>
+            <p><a id="tribute-link" href="#" target="_blank">Link</a></p>
+        </div>
+        <div id="stats-container">
+            <div class="stats-item-hidden" id="stats-item-1">
+                <span class="stats-text">Gerrard made <strong>710</strong> appearances for Liverpool between <strong>1998</strong> and <strong>2015</strong>.</span>
+            </div>
+            <div class="stats-item-hidden" id="stats-item-2">
+                <span class="stats-text">He scored <strong>186</strong> goals and recorded <strong>145</strong> assists during this time.</span>
+            </div>
+            <div class="stats-item-hidden" id="stats-item-3">
+                <span class="stats-text">He won <strong>52.39%</strong> of his games in a Liverpool shirt before moving on to play for LA Galaxy.</span>
+            </div>
+            <div class="stats-item-hidden" id="stats-item-4">
+                <span class="stats-text">Gerrard also made <strong>114</strong> appearances for England, scoring <strong>21</strong> goals in the process.</span>
+            </div>
+        </div>
+        <div class="center">
+            <h3 id="src-link"><a href="https://www.lfchistory.net/players/player/profile/305" target="_blank">View full profile at LFC History</a></h3>
+        </div> 
+       </main>
+       <script>
+            let tilesShown = {
+                '#stats-tile-1': false,
+                '#stats-tile-2': false,
+                '#stats-tile-3': false,
+                '#stats-tile-4': false,
+            }
+            const showTile = (id) => {
+                if (!tilesShown[id]) {
+                    var element = document.querySelector(id);
+                    var position = element.getBoundingClientRect();
+                    if(position.top >= 0 && position.bottom <= window.innerHeight) {
+                        element.classList.remove("stats-item-hidden")
+                        element.classList.add("stats-item")
+                        tilesShown[id] = true
+                    }
+                }
+            }
+            window.addEventListener('scroll', function() { 
+               document.getElementById('container').style.minHeight = 'auto'
+               showTile('#stats-item-1')
+               showTile('#stats-item-2')
+               showTile('#stats-item-3')
+               showTile('#stats-item-4')
+               if (tilesShown['#stats-item-4']) {
+                    document.getElementById('src-link').style.display = 'block'
+                    document.getElementById('src-link').style.paddingBottom = '50px'
+               }
+            });
+       </script>
+    </body> 
+</html>
