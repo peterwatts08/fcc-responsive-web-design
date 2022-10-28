@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: #222;
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+}
+
+#nav-container {
+    width: 300px
+}
+
+nav {
+    position: fixed;
+    width: 300px;
+    margin-top: 70px;
+}
+
+main {
+    width: calc(100% - 300px);
+    border-left: 1px #FFF solid;
+    padding: 0 30px;
+}
+
+ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+ul > li {
+    padding-bottom: 8px;
+}
+
+header {
+    font-size: 32px;
+    padding: 0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+nav > header {
+    background-color: #222;
+    padding: 15px;
+    position: fixed;
+    height: 70px;
+    width: 300px;
+    top: 0;
+    left: 0;
+}
+
+section > div {
+    border-radius: 8px;
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+p {
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+nav > a {
+    border-bottom: 1px solid #FFF;
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+nav > a:hover {
+    background-color: #222;
+}
+
+nav > a:first-of-type {
+    border-top: 1px solid #FFF;
+}
+
+.bottom {
+    margin-bottom: 800px;
+}
+
+@media (max-width: 768px) {
+    body {
+       flex-direction: column;
+    }
+    main {
+        width: 100%;
+        border-left: none;
+    }
+    #nav-container {
+        width: 100%;
+    }
+    nav {
+        position: static;
+        width: auto;
+        max-height: 300px;
+        overflow: scroll;
+    }
+    nav > header {
+        width: 100%;
+    }
+    section > header {
+        padding-top: 70px;
+    }
+}
