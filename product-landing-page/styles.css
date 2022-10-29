@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    margin: 0;
+    background: black;
+    font-family: 'Public Sans', sans-serif;
+    position: relative;
+    margin-top: 80px;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #111;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 3px #3c0097 solid;
+    z-index: 2;
+}
+
+iframe {
+    margin: 20px;
+    border-radius: 12px;
+}
+
+#header-img {
+    filter: invert(1);
+    padding: 25px;
+}
+
+#nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav {
+    margin-right: 25px;
+    display: flex;
+    gap: 50px;
+}
+
+nav > a {
+    color: #CCC;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav > a:hover {
+    color: #FFF;
+}
+
+#hero {
+    min-height: calc(100vh - 80px);
+    border-bottom: 3px #3c0097 solid;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#img-container {
+    max-width: 600px;
+    width: 80%;
+    height: 400px;
+    /* border: 1px solid white; */
+    margin: 60px auto;
+    position: relative;
+}
+
+#pattern {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 12px;
+    background-image: url(https://svgshare.com/i/nhw.svg);
+}
+
+#image-box {
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 12px;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    padding: 20%;
+    color: #111;
+}
+
+#blob1 {
+    border-radius: 56% 25% 25% 57% / 25% 58% 25% 75%;
+    background-color: #111;
+    height: 1000px;
+    width: 1000px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#blob1-caption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    z-index: -1;
+}
+
+#tagline {
+    font-size: 108px;
+    margin: 40px;
+}
+
+#description {
+    font-weight: 400;
+    color: #CCC;
+    letter-spacing: 1px;
+}
+
+.fixed-scrolling {
+    min-height: 200vh;
+    /* border-bottom: 3px #3c0097 solid; */
+    text-align: center;
+    position: relative;
+}
+
+.keep-scrolling {
+    font-size: 48px;
+    color: #666;
+    font-weight: 700;
+    padding: 60px;
+}
+
+.one-page-padding {
+    height: 100vh;
+    border-radius: 12px;
+    margin: 0 20px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #444;
+    letter-spacing: 20px;
+    font-weight: 100;
+}
+
+.one-page-padding:last-of-type {
+    margin-bottom: 20px;
+}
+
+.fixed-header {
+    background-color: black;
+    font-size: 40px;
+    padding: 60px 20px;
+    font-weight: 700;
+    position: sticky;
+    top: 80px;
+}
+
+.email-section {
+    text-align: center;
+    margin: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.email-header {
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+input[type="email"], input[type="submit"] {
+    padding: 15px 25px;
+    min-width: min(400px, 80vw);
+    display: block;
+    margin: 20px 0;
+    font-size: 24px;
+    color: #444;
+    background-color: #111;
+    border: none;
+    border-radius: 12px;
+}
+
+input[type="email"]:focus {
+    outline: #666 1px solid;
+}
+
+input[type="submit"] {
+    color: #CCC;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #222;
+}
+
+@media only screen and (max-width: 768px) {
+    #tagline {
+        font-size: 72px;
+    }
+    #img-container {
+        height: 300px;
+    }
+    nav {
+        gap: 20px;
+    }
+    .keep-scrolling, .one-page-padding {
+        font-size: 32px;
+    }
+    .fixed-header {
+        font-size: 36px;
+    }
+    .fixed-header-sm {
+        font-size: 28px;
+    }
+
+}
