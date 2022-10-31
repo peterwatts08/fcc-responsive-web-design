@@ -30,6 +30,7 @@ iframe {
 
 #header-logo-container {
     position: relative;
+    width: 25%;
 }
 
 #header-img {
@@ -39,7 +40,7 @@ iframe {
 }
 
 #nav-container {
-    width: 100%;
+    width: 75%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
