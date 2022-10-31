@@ -160,6 +160,10 @@ nav > a:hover {
     font-weight: 100;
 }
 
+.one-page-padding span {
+    padding-left: 20px;
+}
+
 .one-page-padding:last-of-type {
     margin-bottom: 20px;
 }
@@ -225,7 +229,8 @@ input[type="submit"]:hover {
         gap: 20px;
     }
     .keep-scrolling, .one-page-padding {
-        font-size: 32px;
+        font-size: 28px;
+        text-overflow: clip;
     }
     .fixed-header {
         font-size: 36px;
