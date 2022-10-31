@@ -28,9 +28,14 @@ iframe {
     border-radius: 12px;
 }
 
+#header-logo-container {
+    position: relative;
+}
+
 #header-img {
     filter: invert(1);
     padding: 25px;
+    height: 100%;
 }
 
 #nav-container {
