@@ -199,9 +199,9 @@ nav > a:hover {
     padding-bottom: 20px;
 }
 
-input[type="email"], input[type="submit"] {
+input[type="email"], button {
     padding: 15px 25px;
-    min-width: min(400px, 80vw);
+    width: min(400px, 80vw);
     display: block;
     margin: 20px 0;
     font-size: 24px;
@@ -215,9 +215,10 @@ input[type="email"]:focus {
     outline: #666 1px solid;
 }
 
-input[type="submit"] {
+button {
     color: #CCC;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 input[type="submit"]:hover {
